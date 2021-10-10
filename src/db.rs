@@ -27,14 +27,23 @@ impl Database {
         Ok(Database { map })
     }
 
+    pub fn print(&self) {
+        for (key, value) in &self.map {
+            println!("{}\t{}", key, value);
+        }
+    }
+
+    pub fn get(&self, key: String) -> Option<String> {
+        let result = self.map.get(&key);
+        result.map(|result| result.to_string())
+    }
+
     pub fn insert(&mut self, key: String, value: String) {
-        self.map.insert(key.to_lowercase(), value.clone());
-        println!("Insert successful for key '{}' and value '{}'.", key, value);
+        self.map.insert(key.to_lowercase(), value);
     }
 
     pub fn remove(&mut self, key: String) {
         self.map.remove(&key.to_lowercase());
-        println!("Delete successful for key '{}'.", key);
     }
 }
 

@@ -10,4 +10,4 @@ TODO:
 * [x] create kv.db file if not exists
 * [x] add case-insensitive inserts
 * [x] add delete-by-key functionality
-* [ ] add print-value-by-key functionality
+* [x] add print-value-by-key functionality
