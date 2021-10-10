@@ -10,13 +10,11 @@ fn main() {
         .subcommand(App::new("insert")
             .about("Inserts a new key/value")
             .arg(Arg::new("key")
-                .short('k')
-                .long("key")
-                .takes_value(true))
+                .index(1)
+                .required(true))
             .arg(Arg::new("value")
-                .short('v')
-                .long("value")
-                .takes_value(true)))
+                .index(2)
+                .required(true)))
         .get_matches();
 
     let mut database = Database::new().expect("Creating db failed");
