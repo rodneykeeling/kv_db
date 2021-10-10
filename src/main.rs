@@ -7,7 +7,6 @@ fn main() {
     println!("The key is '{}' and the value is '{}'", key, value);
 
     let mut database = Database::new().expect("Creating db failed");
-    database.insert(key.to_uppercase(), value.clone());
     database.insert(key, value);
 }
 
