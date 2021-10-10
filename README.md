@@ -9,5 +9,5 @@ TODO:
 * [x] flush _only_ on Drop
 * [x] create kv.db file if not exists
 * [x] add case-insensitive inserts
-* [ ] add delete-by-key functionality
+* [x] add delete-by-key functionality
 * [ ] add print-value-by-key functionality

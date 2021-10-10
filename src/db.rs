@@ -31,6 +31,11 @@ impl Database {
         self.map.insert(key.to_lowercase(), value.clone());
         println!("Insert successful for key '{}' and value '{}'.", key, value);
     }
+
+    pub fn remove(&mut self, key: String) {
+        self.map.remove(&key.to_lowercase());
+        println!("Delete successful for key '{}'.", key);
+    }
 }
 
 // executed after a Database instance goes out of scope but before it's removed
