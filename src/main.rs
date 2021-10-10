@@ -6,7 +6,6 @@ fn main() {
     let mut arguments = std::env::args().skip(1);
     let key = arguments.next().expect("Key was not there");
     let value = arguments.next().unwrap();
-    println!("The key is '{}' and the value is '{}'", key, value);
 
     let mut database = Database::new().expect("Creating db failed");
     database.insert(key, value);
@@ -38,7 +37,8 @@ impl Database {
     }
 
     fn insert(&mut self, key: String, value: String) {
-        self.map.insert(key, value);
+        self.map.insert(key.to_lowercase(), value.clone());
+        println!("Insert successful for key '{}' and value '{}'.", key, value);
     }
 }
 
