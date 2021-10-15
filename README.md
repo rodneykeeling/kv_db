@@ -11,3 +11,5 @@ TODO:
 * [x] add case-insensitive inserts
 * [x] add delete-by-key functionality
 * [x] add print-value-by-key functionality
+* [ ] add tests
+* [ ] add better error handling
